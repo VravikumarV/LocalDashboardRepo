@@ -19,7 +19,7 @@ public class SchedulerController {
  
     @RequestMapping(value = "/schList/", method = RequestMethod.GET)
     public ResponseEntity<List<SchedulerModel>> listAllUsers() {
-    	System.out.println(" In controller  ");
+    	System.out.println(" In controller  1  ");
         List<SchedulerModel> schList = new ArrayList<SchedulerModel>();
         SchedulerModel model = new SchedulerModel("Job", "Scheudle1");
         schList.add(model);

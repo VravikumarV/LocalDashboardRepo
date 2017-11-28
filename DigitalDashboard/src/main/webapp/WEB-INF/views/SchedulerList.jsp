@@ -30,9 +30,23 @@
   </head>
   <body ng-app="myApp" class="ng-cloak">
       <div class="generic-container" ng-controller="SchedulerController as ctrl">
-
-          <div class="panel panel-default">
-                <!-- Default panel contents -->
+<div layout="column">
+	<div flex>  
+		<table style="margin: 0px auto;" align="left">
+			<tr>
+				<td>
+					<div>
+						<b>Person Data:</b> <select id="schedulerData" ng-change="getList()">
+							<option value="">-- Select Persons --</option>
+							<option ng-repeat="s in ctrl.schList" value="{{s.jobName}}">{{s.pathInfo}}</option>
+						</select><br>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!--
+          <div flex class="panel panel-default">
               <div class="panel-heading"><span class="lead">List</span></div>
               <div class="tablecontainer">
                   <table class="table table-hover">
@@ -51,6 +65,8 @@
                   </table>
               </div>
           </div>
+		  -->
+		  </div>
       </div>
       
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>

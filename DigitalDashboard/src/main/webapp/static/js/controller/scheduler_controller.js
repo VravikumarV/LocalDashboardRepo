@@ -18,5 +18,8 @@ angular.module('myApp').controller('SchedulerController', ['$scope', 'SchedulerS
             }
         );
     }
+	function getList(){
+		
+	}	alert('hello');
 
 }]);

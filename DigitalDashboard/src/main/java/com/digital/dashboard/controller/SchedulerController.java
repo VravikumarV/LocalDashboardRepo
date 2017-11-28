@@ -21,8 +21,9 @@ public class SchedulerController {
     public ResponseEntity<List<SchedulerModel>> listAllUsers() {
     	System.out.println(" In controller  1  ");
         List<SchedulerModel> schList = new ArrayList<SchedulerModel>();
-        SchedulerModel model = new SchedulerModel("Job", "Scheudle1");
-        schList.add(model);
+        schList.add(new SchedulerModel("Job", "Scheudle 1"));
+        schList.add(new SchedulerModel("Job", "Scheudle 2"));
+        schList.add(new SchedulerModel("Job", "Scheudle 3"));
         if(schList.isEmpty()){
             return new ResponseEntity<List<SchedulerModel>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
         }
